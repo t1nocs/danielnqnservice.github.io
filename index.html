@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Neuquén Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-image 0.5s ease;
+        }
+
+        /* Estilos para los botones del encabezado */
+        .header-buttons button {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background-color: #fff;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Daniel Neuquén Service</h1>
+        <div class="header-buttons">
+            <button onclick="scrollToElement('contacto')">Contacto</button>
+            <button onclick="scrollToElement('servicios')">Servicios</button>
+        </div>
+    </header>
+    <div class="container">
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>Brindo un servicio especializado en la reparación de lavarropas e instalación de aires acondicionados, comprometido con brindar soluciones confiables y eficientes 
+                para nuestros clientes en Neuquén y sus alrededores. Con más de 20 años de experiencia. Además cuento con un profundo conocimiento y habilidades 
+                técnicas en el área. Trabajando de forma particular y desde mi taller en casa, ha atendido las necesidades de numerosos clientes, proporcionando 
+                reparaciones rápidas y efectivas que restauran el funcionamiento óptimo de sus lavarropas.</p>
+        </section>
+        
+        <section id="reparacion-lavarropas">
+            <h2>Reparación de Lavarropas</h2>
+            <p>Ofrezco servicios de reparación de lavarropas de todas las marcas y modelos, y un servicio profesional y confiable de reparación de lavarropas. 
+                independientemente de la marca o modelo. Utilizamos repuestos originales y para garantizar un trabajo de calidad y duradero.</p>
+            <!-- Aquí puedes agregar más detalles sobre la reparación de lavarropas si lo deseas -->
+        </section>
+        
+        <section id="instalacion-aire-acondicionado">
+            <h2>Instalación de Aires Acondicionados</h2>
+            <p>Ofrezco servicios de instalación de aires acondicionados, para
+                brindarte el máximo confort en tu hogar u oficina. Me encargo de todo el proceso de instalación, garantizando un trabajo 
+                impecable y una operación eficiente de tu aire acondicionado.</p>
+            <!-- Aquí puedes agregar más detalles sobre la instalación de aires acondicionados si lo deseas -->
+        </section>
+        
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Tenés alguna pregunta? ¡Estoy acá para ayudarte!</p>
+            <div class="botones-contacto">
+                <a href="tel:+2994157538" style="text-decoration: none;">
+                    <button>Teléfono Celular</button>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=2994157538&text&type=phone_number&app_absent=0" style="text-decoration: none;">
+                    <button>Whatsapp</button>
+                </a>
+                <a href="mailto:danielnqnservice@gmail.com" style="text-decoration: none;">
+                    <button>Correo Electrónico</button>
+                </a>
+            </div>
+            <!-- Agrega más detalles de contacto si es necesario -->
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; Copyright 2024 | Sitio web creado por Valentino Giuffrida</p>
+    </footer>
+
+    <script>
+        // Array de URLs de imágenes de fondo
+        var backgroundImageUrls = [
+            'url(https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/T34DP6UZZRF6PBHGT7A2BBWBBY.jpg)',
+            'url(https://img.rtve.es/imagenes/multas-consumo-luz-noche/1623066433721.jpg)',
+            'url(https://d29jy8ovkd5kcx.cloudfront.net/wp-content/uploads/2021/12/22175155/aparatos-inteligentes.jpg)'
+        ];
+
+        // Función para cambiar la imagen de fondo cada 5 segundos
+        function changeBackgroundImage() {
+            var currentIndex = 0;
+            setInterval(function() {
+                document.body.style.backgroundImage = backgroundImageUrls[currentIndex];
+                currentIndex = (currentIndex + 1) % backgroundImageUrls.length;
+            }, 5000);
+        }
+
+        // Función para desplazarse a un elemento específico
+        function scrollToElement(id) {
+            var element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Iniciar el cambio de imágenes de fondo al cargar la página
+        window.onload = function() {
+            changeBackgroundImage();
+        };
+    </script>
+</body>
+</html>
